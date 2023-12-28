@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <button>9a</button>
+        <button class="js-querySelector">9b</button>
+
+        <button onclick="
+            buttonSelection('heads');
+        "
+        >heads</button>
+        <button onclick="
+            buttonSelection('tails');
+        "
+        
+        >tails</button>
+
+        <p class="js-choice"></p>
+
+        <input placeholder="Name" class="js-name-input" onkeydown="
+           if(event.key === 'Enter'){
+            displayMessage();
+           }
+        ">
+        <button onclick="
+           displayMessage();
+        " class="js-submit-button">Submit</button>
+        <p class="js-message"></p>
+         
+        <script>
+
+            console.log(document.querySelector('button'));
+            
+            document.querySelector('.js-querySelector').innerHTML = '9b done!';
+
+            function buttonSelection(selected){
+                if(selected === 'heads'){
+                    document.querySelector('.js-choice').innerHTML = `You chose: ${selected}`;
+                }else{
+
+                    document.querySelector('.js-choice').innerHTML = `You chose: ${selected}`;
+                }
+            }
+
+
+            function displayMessage(){
+               const inputElement = document.querySelector('.js-name-input');
+               let name = inputElement.value;
+                document.querySelector('.js-message').innerHTML=`Your name is ${name}`;  
+               
+            }
+
+           
+        </script>
+    </body>
+</html>
