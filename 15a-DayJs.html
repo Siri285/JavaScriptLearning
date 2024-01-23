@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script type="module">
+            import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+            import isSatSun from './15f.js'
+            
+            const today = dayjs();
+            const date1 = today.add(5, 'days');
+            console.log(date1.format('MMMM D'));
+
+            const date2 = today.add(1, 'month');
+            console.log(date2.format('MMMM D'));
+
+            const previousDate = today.subtract(1,'month');
+            console.log(previousDate.format('MMMM D'));
+          
+          console.log(today.format('dddd'));
+          
+
+    let  date = dayjs();
+      console.log(date.format('dddd, MMMM D'));
+      console.log(isSatSun(date));
+
+      /*date = dayjs().add(2, 'day');
+      console.log(date.format('dddd, MMMM D'));
+      console.log(isWeekend(date));
+
+      date = dayjs().add(4, 'day');
+      console.log(date.format('dddd, MMMM D'));
+      console.log(isWeekend(date));
+
+      date = dayjs().add(6, 'day');
+      console.log(date.format('dddd, MMMM D'));
+      console.log(isWeekend(date));*/
+    </script>
+        </script>
+    </body>
+</html>
